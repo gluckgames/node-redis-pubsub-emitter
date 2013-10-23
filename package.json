@@ -1,0 +1,37 @@
+{
+  "name": "redis-pubsub-emitter",
+  "version": "0.0.1",
+  "author": "Marek Ventur <marekventur@gmail.com>",
+  "description": "A redis pubsub client that extends EventEmitter",
+  "contributors": [
+    {
+      "name": "Marek Ventur",
+      "email": "marekventur@gmail.com"
+    }
+  ],
+  "scripts": {
+    "test": "mocha test -R tap --recursive --check-leaks"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Gamevy/node-redis-pubsub-emitter.git"
+  },
+  "main": "./index.js",
+  "keywords": [
+    "redis",
+    "pubsub",
+    "EventEmitter"
+  ],
+  "dependencies" : {
+    "redis": "0.8.4"
+  },
+  "devDependencies": {
+    "mocha":  "1.13.0",
+    "chai": "1.7.2",
+    "sinon": "1.7.3"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  }
+}
