@@ -4,7 +4,7 @@ node-redis-pubsub-emitter
 This a simple wrapper for pubsub via redis.
 
 ```javascript
-var redisPubSub = require('./RedisPubSubFactory.js');
+var redisPubSub = require('redis-pubsub-emitter');
 
 // The factory method takes the same parameters as redic.createClient()
 var redisPubSubClient = edisPubSub.createClient(6379, 'localhost');
