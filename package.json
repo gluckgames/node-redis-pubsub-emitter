@@ -1,6 +1,6 @@
 {
   "name": "redis-pubsub-emitter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Marek Ventur <marekventur@gmail.com>",
   "description": "A redis pubsub client that extends EventEmitter",
   "contributors": [
@@ -22,11 +22,11 @@
     "pubsub",
     "EventEmitter"
   ],
-  "dependencies" : {
+  "dependencies": {
     "redis": "0.8.4"
   },
   "devDependencies": {
-    "mocha":  "1.13.0",
+    "mocha": "1.13.0",
     "chai": "1.7.2",
     "sinon": "1.7.3"
   },
