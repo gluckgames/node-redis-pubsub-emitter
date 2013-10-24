@@ -14,7 +14,7 @@
  */
 
 var redis = require('redis');
-var RedisPubSub = require('./RedisPubSub');
+var RedisPubSub = require('./lib/RedisPubSub.js');
 module.exports = {
     createClient: function(port, host, options) {
         var redisEmitter = redis.createClient(port, host, options);
