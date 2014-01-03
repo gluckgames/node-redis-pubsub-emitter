@@ -10,9 +10,8 @@ describe('RedisPubSub', function(){
     var redisPubSub = null;
 
     beforeEach(function() {
-        redisEmitter = {
-            publish: sinon.spy()
-        };
+        redisEmitter = new EventEmitter();
+        redisEmitter.publish = sinon.spy();
 
         redisReceiver = new EventEmitter();
         redisReceiver.psubscribe = sinon.spy();
@@ -76,6 +75,14 @@ describe('RedisPubSub', function(){
         assert.equal(redisReceiver.punsubscribe.callCount, 0);
         redisReceiver.emit('pmessage', 'test.topic.1.*', 'test.topic.1.test', '{}');
         assert.equal(redisReceiver.punsubscribe.callCount, 1);
+    });
+
+    it('passes errors through', function(done) {
+        redisPubSub.on('error', function(msg) {
+            assert.deepEqual(msg, 'test');
+            done();
+        });
+        redisReceiver.emit('error', 'test');
     });
 
 });
