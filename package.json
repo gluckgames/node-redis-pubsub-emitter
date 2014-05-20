@@ -23,7 +23,7 @@
     "EventEmitter"
   ],
   "dependencies": {
-    "redis": "0.8.4"
+    "redis": "^0.10.1"
   },
   "devDependencies": {
     "mocha": "1.13.0",
