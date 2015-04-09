@@ -6,8 +6,8 @@ This a simple wrapper for pubsub via redis.
 ```javascript
 var redisPubSub = require('redis-pubsub-emitter');
 
-// The factory method takes the same parameters as redic.createClient()
-var redisPubSubClient = edisPubSub.createClient(6379, 'localhost');
+// The factory method takes the same parameters as redis.createClient()
+var redisPubSubClient = redisPubSub.createClient(6379, 'localhost');
 
 // Both on() and once() support *-wildcards, therefore the actual topic
 // is always passed through
