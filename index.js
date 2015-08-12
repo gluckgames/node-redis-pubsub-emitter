@@ -28,8 +28,17 @@ module.exports = {
                 redisPubSub.emit('ready');
             }
         }
+        var endCounter = 0;
+        function onEnd() {
+            endCounter++;
+            if (endCounter == 2) {
+                redisPubSub.emit('end');
+            }
+        }
         redisEmitter.on('ready', onReady);
         redisReceiver.on('ready', onReady);
+        redisEmitter.on('end', onEnd);
+        redisReceiver.on('end', onEnd);
 
         return redisPubSub;
     }
